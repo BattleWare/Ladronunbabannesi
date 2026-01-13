@@ -1,0 +1,21 @@
+-- SERVICES
+local Lighting = game:GetService("Lighting")
+
+-- NO FOG
+Lighting.FogStart = 0
+Lighting.FogEnd = 1e9
+Lighting.FogColor = Color3.new(1, 1, 1)
+
+-- ATMOSPHERE DESTROY (oyun bunu kullanıyorsa)
+for _, v in ipairs(Lighting:GetChildren()) do
+    if v:IsA("Atmosphere") then
+        v:Destroy()
+    end
+end
+
+-- FUTURE-PROOF (oyun tekrar eklerse)
+Lighting.ChildAdded:Connect(function(child)
+    if child:IsA("Atmosphere") then
+        child:Destroy()
+    end
+end)
