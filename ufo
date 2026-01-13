@@ -1,0 +1,37 @@
+-- SERVICES
+local RunService = game:GetService("RunService")
+local Workspace = game:GetService("Workspace")
+
+-- TARGET
+local Target = Workspace:WaitForChild("Ignore"):WaitForChild("UFO_Template")
+
+-- SETTINGS
+local ESP_COLOR = Color3.fromRGB(255, 255, 255) -- beyaz
+local FILL_TRANSPARENCY = 0.5
+local OUTLINE_TRANSPARENCY = 0
+local DEPTH_MODE = Enum.HighlightDepthMode.AlwaysOnTop
+
+-- CREATE ESP
+local function createESP(obj)
+    if obj:FindFirstChild("UFO_ESP") then return end
+
+    local hl = Instance.new("Highlight")
+    hl.Name = "UFO_ESP"
+    hl.Adornee = obj
+    hl.FillColor = ESP_COLOR
+    hl.OutlineColor = ESP_COLOR
+    hl.FillTransparency = FILL_TRANSPARENCY
+    hl.OutlineTransparency = OUTLINE_TRANSPARENCY
+    hl.DepthMode = DEPTH_MODE
+    hl.Parent = obj
+end
+
+-- INIT
+createESP(Target)
+
+-- FAIL-SAFE (silinip tekrar eklenirse)
+RunService.RenderStepped:Connect(function()
+    if not Target:FindFirstChild("UFO_ESP") then
+        createESP(Target)
+    end
+end)
