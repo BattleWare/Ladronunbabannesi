@@ -3565,7 +3565,7 @@ Instance.new('UICorner', greenButton2).CornerRadius = UDim.new(0, 4)
 local greenButton2 = Instance.new('TextButton', v151)
 greenButton2.Size = UDim2.new(1, 0, 0, 35)
 greenButton2.BackgroundColor3 = Color3.fromRGB(50, 50, 50) -- YEŞİL
-greenButton2.Text = 'Load Script #3'
+greenButton2.Text = 'Money Bag ESP'
 greenButton2.TextColor3 = Color3.new(1, 1, 1)
 greenButton2.Font = Enum.Font.GothamBold
 greenButton2.TextSize = 14
@@ -3589,6 +3589,47 @@ end)
 Instance.new('UICorner', greenButton2).CornerRadius = UDim.new(0, 4)
 
 -- 5. Loader butonu
+local greenButton2 = Instance.new('TextButton', v151)
+greenButton2.Size = UDim2.new(1, 0, 0, 35)
+greenButton2.BackgroundColor3 = Color3.fromRGB(50, 50, 50) -- YEŞİL
+greenButton2.Text = 'Load Script #3'
+greenButton2.TextColor3 = Color3.new(1, 1, 1)
+greenButton2.Font = Enum.Font.GothamBold
+greenButton2.TextSize = 14
+greenButton2.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+end)
+Instance.new('UICorner', greenButton2).CornerRadius = UDim.new(0, 4)
+
+CreateLabel(v151, 'World ESP')
+
+-- 6. Loader butonu
+local greenButton2 = Instance.new('TextButton', v151)
+greenButton2.Size = UDim2.new(1, 0, 0, 35)
+greenButton2.BackgroundColor3 = Color3.fromRGB(50, 50, 50) -- YEŞİL
+greenButton2.Text = 'Load Script #3'
+greenButton2.TextColor3 = Color3.new(1, 1, 1)
+greenButton2.Font = Enum.Font.GothamBold
+greenButton2.TextSize = 14
+greenButton2.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+end)
+Instance.new('UICorner', greenButton2).CornerRadius = UDim.new(0, 4)
+
+-- 7. Loader butonu
+local greenButton2 = Instance.new('TextButton', v151)
+greenButton2.Size = UDim2.new(1, 0, 0, 35)
+greenButton2.BackgroundColor3 = Color3.fromRGB(50, 50, 50) -- YEŞİL
+greenButton2.Text = 'Load Script #3'
+greenButton2.TextColor3 = Color3.new(1, 1, 1)
+greenButton2.Font = Enum.Font.GothamBold
+greenButton2.TextSize = 14
+greenButton2.MouseButton1Click:Connect(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+end)
+Instance.new('UICorner', greenButton2).CornerRadius = UDim.new(0, 4)
+
+-- 8. Loader butonu
 local greenButton2 = Instance.new('TextButton', v151)
 greenButton2.Size = UDim2.new(1, 0, 0, 35)
 greenButton2.BackgroundColor3 = Color3.fromRGB(50, 50, 50) -- YEŞİL
